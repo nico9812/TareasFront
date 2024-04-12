@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ProyectosList.css">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+    <div class="navbar">
+        <button class="nav-left"><i class="bi bi-list"></i></button>
+        <div class="nav-center">
+            <h1>Proyectos</h1>
+        </div>
+        <button class="nav-right"><i class="bi bi-person-fill"></i></button>
+    </div>
+
+    <div class="contenedor">
+        <div class="input-container menu d-flex">
+            <div class='menu1'>
+                <i class="bi bi-sort-alpha-down icon"></i>
+                <i class="bi bi-sort-numeric-down icon"></i>
+            </div>
+            <div class='menu2'>
+                <div class="buscar">
+                    <i class="bi bi-search"></i>
+                    <input type="search" placeholder="buscar">
+                </div>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Proyecto</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Impacto</th>
+                <th scope="col">Responsable</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Proyecto A</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                <td>Alto</td>
+                <td>John Doe</td>
+                <td><button>Editar</button><button>Borrar</button></td>
+              </tr>
+              <tr>
+                <td>Proyecto B</td>
+                <td>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                <td>Medio</td>
+                <td>Jane Doe</td>
+                <td><button>Editar</button><button>Borrar</button></td>
+              </tr>
+              <tr>
+                <td>Proyecto C</td>
+                <td>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+                <td>Bajo</td>
+                <td>Max Mustermann</td>
+                <td><button>Editar</button><button>Borrar</button></td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- <img src="img/escudosgo.png" alt="Santiago del Estero"> -->
+    
+</body>
+</html>
