@@ -8,14 +8,19 @@
 body{
     height: 100vh;
     background-color: #E9EDF2;
-    overflow: hidden;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+.espacioArriba{
+    height: 15px;
+    background-color: #E9EDF2;
 }
 
 .navbar{
-    margin-top: 15px;
     display: flex;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
     height: 50px;
     background-color: white;
 }
@@ -27,6 +32,10 @@ body{
     height: 100%;
     border: none; /* Quita los bordes */
     width: 75px;
+    cursor: pointer;
+}
+.nav-left:hover {
+    background-color: #a1d2ff;
 }
   
 .nav-center {
@@ -51,11 +60,12 @@ body{
     height: 100%;
     border: none; /* Quita los bordes */
     width: 75px;
+    cursor: pointer;
 }
 
 
 .contenedor{
-    margin: 60px 75px 60px 75px;
+    margin: 60px 75px 0px 75px;
     padding: 25px 30px 25px 30px;
     /* display: flex;
     justify-content: space-between; */
@@ -122,7 +132,136 @@ input[type="search"]::placeholder {
 .table{
     margin: 30px 0px 0px 0px;
     border-collapse: collapse;
+    width: 100%;
+    font-size: 20px;
 }
 thead th {
     border-bottom: 1px solid black; /* Establecer el borde inferior en los elementos th dentro de thead */
+}
+td{
+    text-align: center;
+}
+
+th, td {
+    /* border: 1px solid #ddd; */
+    padding: 8px;
+    width: 275px;
+  }
+  
+.fan{
+    width: auto;
+  }
+
+td i{
+    font-size: 30px;
+}
+
+.footimg {
+    height: 55px;
+    width: 55px;
+}
+footer{
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+footer div{
+    height: 100%;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.over{
+    position: absolute;
+    height: 100%;
+    width: 0px;
+    background-color: hsla(0, 0%, 0%, 0.44);
+    z-index: 1;
+}
+.sidebar{
+    background-color: white;
+    height: 100%;
+    width: 0px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 2;
+}
+.navbar-side{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    background-color: #D6EBFF;
+}
+.espacioArriba-side{
+    height: 15px;
+    background-color: #ffffff;
+}
+.nav-left:focus #sidebar {
+    width: 0px; /* Cambia el ancho del sidebar a 0px cuando el botón es clickeado */
+}
+ul{
+    margin-top: 30px;
+    list-style-type: none;
+    font-size: 24px;
+}
+li{
+    border-top: 1px solid hsla(0, 0%, 0%, 0.5);
+    
+}
+li a{
+    display: block;
+    padding: 20px 0px 20px 30px;
+    text-decoration: none;
+    color: black;
+}
+hr{
+    height: 1px;
+    background-color:hsla(0, 0%, 0%, 0.5) ;
+}
+
+.imgnavside{
+    height: 100%;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgnavside img{
+    height: 40px;
+    width: 40px;
+}
+
+.menuuser{
+    height: 0px;
+    width: 240px;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    position: absolute;
+    right: 2px;
+    transition: height 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.menuuser div{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menuuser div a{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    height: 100%;
+}
+.menuuser div i{
+    font-size: 25px;
+    margin-left: 20px;
 }
