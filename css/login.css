@@ -112,10 +112,12 @@ input[type="submit"] {
     background-color: #FF4C4C;
     color: white;
     cursor: pointer;
-    width: 34%;
+    height: 40px;
+    width: 130px;
+    font-size: 20px;
+
 }
 
 input[type="submit"]:hover {
     background-color: #f83333;
-    font-size: 20px;
 }
