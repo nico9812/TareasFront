@@ -1,3 +1,4 @@
+
 *{
     font-family: "Inter", sans-serif;
     margin: 0px;
@@ -22,7 +23,7 @@ body{
     justify-content: space-between;
     width: 100%;
     height: 50px;
-    background-color: white;
+    background-color: #D6EBFF;
 }
 
 .nav-left {
@@ -34,15 +35,15 @@ body{
     width: 75px;
     cursor: pointer;
 }
-.nav-left:hover {
-    background-color: #a1d2ff;
+.navbar i:hover {
+    font-size: 35px;
 }
   
 .nav-center {
     align-self: center; /* Alinea el nav al centro */
     font-size: 24px;
-    background-color: #FF6C6C;
-    color: #E8E369;
+    background-color: #D6EBFF;
+    color: black;
     height: 100%;
     display: flex;
     align-items: center;
@@ -73,6 +74,8 @@ body{
     width: calc(100vw - 150px);
     background-color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); /* Agrega sombra */
+    overflow: hidden;
+    overflow-x: auto;
 }
 .menu{
     background-color: #D6EBFF;
@@ -90,7 +93,7 @@ body{
     font-size: 16px;
     border: none;
     border-radius: 15px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     margin-right: 15px;
 }
 .menu1{
@@ -145,17 +148,24 @@ input[type="search"]::placeholder {
     color: #575757;
 }
 
-.table{
+.tablecont{
     margin: 30px 0px 0px 0px;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+}
+
+.table{
     border-collapse: collapse;
     width: 100%;
-    font-size: 20px;
 }
 thead th {
     border-bottom: 1px solid black; /* Establecer el borde inferior en los elementos th dentro de thead */
+    font-size: 20px;
 }
 td{
     text-align: center;
+    font-size: 16px;
 }
 
 th, td {
@@ -204,6 +214,11 @@ footer div{
     overflow: hidden;
     z-index: 2;
 }
+
+.sidebar i:hover {
+    font-size: 35px;
+}
+
 .navbar-side{
     display: flex;
     justify-content: space-between;

@@ -60,87 +60,89 @@
             <div class='menu2'>
                 <div class="buscar">
                     <i class="bi bi-search"></i>
-                    <input type="search" placeholder="buscar">
+                    <input type="search" placeholder="Buscar">
                 </div>
             </div>
         </div>
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Proyecto</th>
-                <th scope="col">Descripción</th>
-                <th scope="col">Impacto</th>
-                <th scope="col">Responsable</th>
-                <th scope="col" class="fan"></th>
-                <th scope="col">Acciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Proyecto A</td>
-                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-                <td>Alto</td>
-                <td>John Doe</td>
-                <td class="fan"></td>
-                <td>
-                  <i class="bi bi-three-dots" onclick="toggleMenuOpcion()"></i>
-                  <div class="menuopcion" id="menuopcion">
-                  </div>
-                </td>
-                <script>
-                  document.addEventListener('click', function(event) {
-                    var menu = document.getElementById('menuopcion');
-                    var targetElement = event.target; 
-                    // cierra el menu de usuario si aprieta fuera 
-                    if (menu.offsetHeight > 2) {
-                      if (!menu.contains(targetElement)) {
-                        menu.style.height = '0px'; // Cambia el ancho del div a 0px
+        <div class="tablecont">
+          <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Proyecto</th>
+                  <th scope="col">Descripción</th>
+                  <th scope="col">Impacto</th>
+                  <th scope="col">Responsable</th>
+                  <th scope="col" class="fan"></th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Proyecto A</td>
+                  <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                  <td>Alto</td>
+                  <td>John Doe</td>
+                  <td class="fan"></td>
+                  <td>
+                    <i class="bi bi-three-dots" onclick="toggleMenuOpcion()"></i>
+                    <div class="menuopcion" id="menuopcion">
+                    </div>
+                  </td>
+                  <script>
+                    document.addEventListener('click', function(event) {
+                      var menu = document.getElementById('menuopcion');
+                      var targetElement = event.target; 
+                      // cierra el menu de usuario si aprieta fuera 
+                      if (menu.offsetHeight > 2) {
+                        if (!menu.contains(targetElement)) {
+                          menu.style.height = '0px'; // Cambia el ancho del div a 0px
+                        } 
+                      }
+  
+                    });
+  
+                    // abre o cierra el menu de usuario al apretar el boton 
+                    function toggleMenuOpcion() {
+                      var menuuser = document.getElementById('menuopcion');
+                      if (menuuser.offsetHeight === 0) {
+                          menuuser.style.height = '200px'; // Cambia el ancho del menuuser a 200px
+                          menuuser.style.border = '1px solid hsla(0, 0%, 0%, 0.5)';
+                      } else {
+                          menuuser.style.height = '0px'; // Cambia el ancho del menuuser a 0px
+                      }
+                    }
+  
+                    // Agregar un escuchador para el evento transitionend
+                    document.querySelector('.menuopcion').addEventListener('transitionend', function(event) {
+                      var menuuser = event.target;
+                      if (menuuser.offsetHeight === 2) {
+                          menuuser.style.border = 'none'; // Quita el borde
                       } 
-                    }
-
-                  });
-
-                  // abre o cierra el menu de usuario al apretar el boton 
-                  function toggleMenuOpcion() {
-                    var menuuser = document.getElementById('menuopcion');
-                    if (menuuser.offsetHeight === 0) {
-                        menuuser.style.height = '200px'; // Cambia el ancho del menuuser a 200px
-                        menuuser.style.border = '1px solid hsla(0, 0%, 0%, 0.5)';
-                    } else {
-                        menuuser.style.height = '0px'; // Cambia el ancho del menuuser a 0px
-                    }
-                  }
-
-                  // Agregar un escuchador para el evento transitionend
-                  document.querySelector('.menuopcion').addEventListener('transitionend', function(event) {
-                    var menuuser = event.target;
-                    if (menuuser.offsetHeight === 2) {
-                        menuuser.style.border = 'none'; // Quita el borde
-                    } 
-                  });
-
-                </script>
-              </tr>
-              <tr>
-                <td>Proyecto B</td>
-                <td>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-                <td>Medio</td>
-                <td>Jane Doe</td>
-                <td class="fan"></td>
-                <td>
-                  <i class="bi bi-three-dots"></i>
-                </td>
-              </tr>
-              <tr>
-                <td>Proyecto C</td>
-                <td>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
-                <td>Bajo</td>
-                <td>Max Mustermann</td>
-                <td class="fan"></td>
-                <td><i class="bi bi-three-dots"></i></td>
-              </tr>
-            </tbody>
-        </table>
+                    });
+  
+                  </script>
+                </tr>
+                <tr>
+                  <td>Proyecto B</td>
+                  <td>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                  <td>Medio</td>
+                  <td>Jane Doe</td>
+                  <td class="fan"></td>
+                  <td>
+                    <i class="bi bi-three-dots"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Proyecto C</td>
+                  <td>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+                  <td>Bajo</td>
+                  <td>Max Mustermann</td>
+                  <td class="fan"></td>
+                  <td><i class="bi bi-three-dots"></i></td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
     </div>
   </body>
   <script>
